@@ -4,19 +4,17 @@
 • 依赖包：numpy、Pillow
 安装依赖：
 bash
-￼
-￼
+
+
 pip install -r
  requirements.txt
-￼
+
 运行说明
 准备工作
 将课程提供的 image_encoder.npz 权重文件放入项目下的 weights 文件夹中。
 数值校验
 提供了分阶段校验脚本，可以逐个验证每个环节的输出是否正确：
 bash
-￼
-￼
 # 校验资源文件完整性
 python check.py 
 --stage
@@ -40,15 +38,15 @@ python check.py
 python check.py 
 --stage
  all
-￼
+
 提取图像特征
 使用入口脚本可以对指定图片提取特征向量：
 bash
-￼
-￼
+
+
 python run.py --images test.jpg --output
  tokens.npz
-￼
+
 实现内容
 基于课程给出的代码框架，补全了 6 处核心功能：
 1. 图像分块：将输入的 [B,3,224,224] 图像切分为 49 个 32×32 补丁并按顺序展平
